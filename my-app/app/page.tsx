@@ -1,21 +1,49 @@
-import { Button } from '@/components/ui/button'
-import React from 'react'
+import CompanionCard from "@/components/CompanionCard";
+import CompanionsList from "@/components/CompanionsList";
+import CTA from "@/components/CTA";
+import {recentSessions} from "@/constants";
 
 const Page = () => {
   return (
-    <div>
-      <h1>Welcome to the Home Page</h1>
-      <p>This is the main landing page of the application.</p>
-      <nav>
-        <ul>
-          <li><a href="/subscription">Subscription</a></li>
-          <li><a href="/my-journey">My Journey</a></li>
-          <li><a href="/sign-in">Sign In</a></li>
-        </ul>
-      </nav>
-      <Button variant="outline">Click Me</Button>
-    </div>
+    <main>
+      <h1>Popular Companions</h1>
+
+        <section className="home-section">
+            <CompanionCard
+                id="123"
+                name="Neura the Brainy Explorer"
+                topic="Neural Network of the Brain"
+                subject="science"
+                duration={45}
+                color="#ffda6e"
+            />
+            <CompanionCard
+                id="456"
+                name="Countsy the Number Wizard"
+                topic="Derivatives & Integrals"
+                subject="maths"
+                duration={30}
+                color="#e5d0ff"
+            />
+            <CompanionCard
+                id="789"
+                name="Verba the Vocabulary Builder"
+                topic="language"
+                subject="English Literature"
+                duration={30}
+                color="#BDE7FF"
+            />
+        </section>
+
+        <section className="home-section">
+            <CompanionsList
+                title="Recently completed sessions"
+                companions={recentSessions}
+                classNames="w-2/3 max-lg:w-full"
+            />
+            <CTA />
+        </section>
+    </main>
   )
 }
-
-export default Page
+export default Page;
