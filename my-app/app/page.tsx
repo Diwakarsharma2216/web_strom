@@ -2,8 +2,10 @@ import CompanionCard from "@/components/CompanionCard";
 import CompanionsList from "@/components/CompanionsList";
 import CTA from "@/components/CTA";
 import {recentSessions} from "@/constants";
+import { auth } from "@clerk/nextjs/server";
 
 const Page = () => {
+ 
   return (
     <main>
       <h1>Popular Companions</h1>
