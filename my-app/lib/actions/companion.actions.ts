@@ -24,7 +24,7 @@ export const createCompanion = async (formData: CreateCompanion) => {
 export const getAllCompanions = async () => {
     const supabase = createSupabaseClient();
 
-    let query = supabase.from('companions').select();
+    const query = supabase.from('companions').select();
 
 
 

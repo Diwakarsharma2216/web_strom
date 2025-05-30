@@ -1,11 +1,11 @@
 import {getAllCompanions} from "@/lib/actions/companion.actions";
 import CompanionCard from "@/components/CompanionCard";
 import {getSubjectColor} from "@/lib/utils";
-
-
+import { headers } from "next/headers";
+export const dynamic = "force-dynamic";
 const CompanionsLibrary = async ({ searchParams }: SearchParams) => {
   
-
+ const headersList = headers();
     const companions = await getAllCompanions();
     
 

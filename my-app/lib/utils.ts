@@ -55,10 +55,10 @@ Tutor Guidelines:
       ],
     },
     // Typescript ignores this property, but it is required by the API
-    // @ts-ignore
+ // @ts-expect-error
     clientMessages: [],
     // Typescript ignores this property, but it is required by the API
-    // @ts-ignore
+  // @ts-expect-error
     serverMessages: [],
   };
 
